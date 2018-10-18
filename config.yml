@@ -1,0 +1,16 @@
+---
+  - name: Deploy SNMP
+    hosts: eos
+    gather_facts: no
+    connection: local
+
+    tasks:
+      - name: Generate SNMP config file
+        template: src=snmp.j2 dest=configs/snmp-auto.cfg
+        tags: build
+
+      - name: Deploy SNMP from auto-generated file
+        eos_config:
+          src: "./configs/snmp-auto.cfg"
+          provider: "{{ eos_provider }}"
+        tags: deploy

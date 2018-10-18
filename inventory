@@ -1,0 +1,7 @@
+[all:vars]
+un=someuser
+pwd=pass123
+
+[eos]
+core1
+core2

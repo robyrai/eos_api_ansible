@@ -1,0 +1,16 @@
+---
+
+eos_provider:
+  username: "{{ un }}"
+  password: "{{ pwd }}"
+  host: "{{ inventory_hostname }}"
+
+snmp:
+  contact: pico_trading
+  location: NY
+  ro:
+    - public123
+    - london456
+  rw:
+    - private123
+    - pico456

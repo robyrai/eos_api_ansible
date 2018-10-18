@@ -1,0 +1,7 @@
+- name: Enable eAPI
+   eos_eapi:
+       enable_http: yes
+       enable_https: yes
+   become: true
+   become_method: enable
+   when: ansible_network_os == 'eos'
