@@ -13,4 +13,4 @@ snmp:
     - london456
   rw:
     - private123
-    - pico456
+    - nano456
