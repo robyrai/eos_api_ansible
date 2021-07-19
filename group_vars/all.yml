@@ -6,7 +6,7 @@ eos_provider:
   host: "{{ inventory_hostname }}"
 
 snmp:
-  contact: pico_trading
+  contact: nano_road
   location: NY
   ro:
     - public123
